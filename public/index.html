@@ -1,400 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Reward Deals Playbook</title>
-        <style>
-            :root {
-                --bg: #0e0e0e;
-                --card: #1b1b1b;
-                --gold: #ffd54a;
-                --ink: #fff;
-                --muted: #b5b5b5;
-                --line: #2e2e2e
-            }
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hobby Lobby Christmas Shopping Method (Free PDF)</title>
+<style>
+:root{--bg:#0e0e0e;--card:#1b1b1b;--gold:#ffd54a;--ink:#fff;--muted:#b5b5b5;--line:#2e2e2e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.hero{padding:48px 0 32px;background:radial-gradient(circle at 80% 0,#3a2f08 0,transparent 55%)}
+.tag{display:inline-block;background:var(--gold);color:#111;font-weight:800;font-size:13px;padding:5px 12px;border-radius:99px;margin-bottom:16px}
+h1{font:italic 900 clamp(34px,9vw,60px)/1.05 system-ui,"Arial Black",Impact,sans-serif;margin:0 0 16px;letter-spacing:-.02em}
+h1 em{font-style:inherit;color:var(--gold)}
+h2{font:italic 900 clamp(26px,6vw,36px)/1.1 system-ui,"Arial Black",sans-serif;margin:0 0 14px}
+.sub{font-size:19px;color:var(--muted);max-width:30em}
+.cta{display:block;text-align:center;background:var(--gold);color:#111;font-weight:900;font-size:19px;text-decoration:none;padding:18px 22px;border-radius:12px;margin:24px 0 8px;box-shadow:0 8px 0 #9c7f12;transition:transform .1s,box-shadow .1s}
+.cta:active{transform:translateY(6px);box-shadow:0 2px 0 #9c7f12}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.fine{font-size:13px;color:var(--muted);text-align:center;margin:10px 0 0}
+.shot{margin:36px 0 0;transform:rotate(-2deg);border:2px solid var(--gold);border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(255,213,74,.15)}
+.shot img{display:block;width:100%;height:auto}
+section{padding:44px 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.chip{font:inherit;font-weight:800;background:var(--card);color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:12px 18px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:#111;border-color:var(--gold)}
+.chip:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.out{background:var(--card);border-radius:14px;padding:22px;border-left:6px solid var(--gold);font-size:20px}
+.out b{color:var(--gold);font-size:34px;display:block;line-height:1.1}
+.steps{display:grid;gap:14px;margin-top:18px}
+.step{background:var(--card);border-radius:14px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+.n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--gold);color:#111;font-weight:900;display:grid;place-items:center}
+.step p{margin:0;color:var(--muted)}.step strong{color:var(--ink);display:block}
+.list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
+.list li{background:var(--card);border-radius:10px;padding:14px 16px 14px 46px;position:relative}
+.list li::before{content:"✓";position:absolute;left:16px;color:var(--gold);font-weight:900}
+.good{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:28px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:13px;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<span class="tag">FREE PDF · CHRISTMAS SHOPPING</span>
+<h1>I found a way to save on <em>Hobby Lobby</em> Christmas shopping. Now I’m sharing it free.</h1>
+<p class="sub">I discovered this method, used it myself and wrote it all up in a PDF. You get it for free. In return, you complete one quick sponsor deal, which helps me earn some extra income for Christmas.</p>
+<a class="cta" href="https://trkoffer.net/cl/i/34jgqv" rel="sponsored noopener">Get the free PDF</a>
+<p class="fine">Unlocks after one short sponsored offer. I may earn a commission.</p>
+<div class="shot"><a href="https://imgbb.com/"><img src="https://i.ibb.co/9HtrK9Yy/Screenshot-2026-10-14-211503.png" alt="Screenshot 2026 10 14 211503" border="0"></a></div>
+</div></header>
 
-            * {
-                box-sizing: border-box
-            }
+<main class="wrap">
+<section>
+<h2>Tap a reward. See the work.</h2>
+<p class="sub">This is the program’s tier table from my screenshot. Pick a reward to see how many deals it takes.</p>
+<div class="chips" id="chips" role="group" aria-label="Reward tiers"></div>
+<div class="out" id="out" aria-live="polite"></div>
+</section>
 
-            body {
-                margin: 0;
-                background: var(--bg);
-                color: var(--ink);
-                font: 17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif
-            }
+<section>
+<h2>Straight talk</h2>
+<ul class="list">
+<li><strong>It’s free.</strong> The PDF costs you nothing.</li>
+<li><strong>Here’s how I get paid.</strong> The sponsor deal you complete to unlock it earns me a commission. That’s my Christmas fund.</li>
+<li><strong>You can check the proof.</strong> The reward tiers above are from the program’s own site.</li>
+<li><strong>No surprises.</strong> Read each offer’s terms first. Some may involve a paid trial.</li>
+</ul>
+</section>
 
-            .wrap {
-                max-width: 760px;
-                margin: 0 auto;
-                padding: 0 20px
-            }
+<section>
+<h2>What’s in the PDF</h2>
+<ul class="list">
+<li>Which tier is worth it for your budget</li>
+<li>How I chose deals and kept track of them</li>
+<li>How I claimed my card</li>
+<li>The mistakes that waste your time</li>
+</ul>
+<a class="cta" href="https://trkoffer.net/cl/i/34jgqv" rel="sponsored noopener">Get the free PDF</a>
+<p class="good">Results vary and aren’t guaranteed.</p>
+</section>
+</main>
 
-            header {
-                padding: 48px 0 24px;
-                background: radial-gradient(circle at 85% 0,#3a2f08 0,transparent 55%)
-            }
+<footer><div class="wrap">Independent page. Not affiliated with Hobby Lobby, any retailer, or the program shown. · <span>your-email@example.com</span></div></footer>
 
-            h1 {
-                font: italic 900 clamp(34px,8vw,54px)/1.05 system-ui,"Arial Black",sans-serif;
-                margin: 0 0 12px;
-                letter-spacing: -.02em
-            }
-
-            h1 em {
-                font-style: inherit;
-                color: var(--gold)
-            }
-
-            h2 {
-                font: italic 900 clamp(24px,5vw,30px)/1.15 system-ui,"Arial Black",sans-serif;
-                margin: 0 0 12px
-            }
-
-            .sub {
-                color: var(--muted);
-                font-size: 19px
-            }
-
-            section {
-                padding: 30px 0;
-                border-top: 1px solid var(--line)
-            }
-
-            .note {
-                background: var(--card);
-                border-left: 6px solid var(--gold);
-                border-radius: 10px;
-                padding: 14px 18px;
-                margin: 18px 0
-            }
-
-            figure {
-                margin: 20px 0
-            }
-
-            figure img {
-                display: block;
-                width: 100%;
-                max-width: 520px;
-                height: auto;
-                border: 2px solid var(--gold);
-                border-radius: 12px
-            }
-
-            figcaption,.small {
-                font-size: 14px;
-                color: var(--muted);
-                margin-top: 8px
-            }
-
-            .scroll {
-                overflow-x: auto
-            }
-
-            table {
-                border-collapse: collapse;
-                width: 100%;
-                min-width: 480px
-            }
-
-            th,td {
-                padding: 10px 12px;
-                text-align: left;
-                border-bottom: 1px solid var(--line)
-            }
-
-            th {
-                background: var(--gold);
-                color: #111
-            }
-
-            td.num {
-                font-weight: 800
-            }
-
-            tr.pick td {
-                background: #2a2410
-            }
-
-            .chk {
-                list-style: none;
-                padding: 0;
-                margin: 14px 0;
-                display: grid;
-                gap: 10px
-            }
-
-            .chk label {
-                display: flex;
-                gap: 12px;
-                align-items: flex-start;
-                background: var(--card);
-                border-radius: 10px;
-                padding: 14px 16px;
-                cursor: pointer
-            }
-
-            .chk input {
-                width: 22px;
-                height: 22px;
-                accent-color: var(--gold);
-                flex: none;
-                margin-top: 3px
-            }
-
-            .chk input:checked+span {
-                color: var(--muted);
-                text-decoration: line-through
-            }
-
-            .chk strong {
-                color: var(--gold)
-            }
-
-            .list {
-                margin: 14px 0;
-                padding-left: 1.2em
-            }
-
-            .list li {
-                margin-bottom: 8px
-            }
-
-            .trk input {
-                width: 100%;
-                min-width: 90px;
-                background: var(--card);
-                color: var(--ink);
-                border: 1px solid var(--line);
-                border-radius: 6px;
-                padding: 8px;
-                font: inherit;
-                font-size: 15px
-            }
-
-            .trk input:focus-visible,.chk input:focus-visible,button:focus-visible {
-                outline: 3px solid #fff;
-                outline-offset: 2px
-            }
-
-            button {
-                font: inherit;
-                font-weight: 800;
-                background: var(--gold);
-                color: #111;
-                border: 0;
-                border-radius: 8px;
-                padding: 10px 16px;
-                cursor: pointer;
-                margin-top: 12px
-            }
-
-            footer {
-                padding: 28px 0 48px;
-                border-top: 1px solid var(--line);
-                font-size: 14px;
-                color: var(--muted)
-            }
-
-            @media print {
-                body {
-                    background: #fff;
-                    color: #000
-                }
-
-                header {
-                    background: none
-                }
-
-                .note,.chk label {
-                    background: #f4f4f4
-                }
-
-                button {
-                    display: none
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <div class="wrap">
-                <h1>
-                    The <em>Reward Deals</em> Playbook
-                </h1>
-                <p class="sub">How I’m using reward deals to fund my Christmas shopping, and how you can plan yours.</p>
-                <div class="note">
-                    <strong>Where I am right now:</strong> I’ve completed Level 2 of the program (2 deals). I’m sharing this as I go, so everything below is what I’ve learned so far plus the plan I’m following for the next levels. I’ll update it as I move up.
-                </div>
-            </div>
-        </header>
-        <main class="wrap">
-            <section>
-                <h2>What this program is</h2>
-                <p>The program pays gift card rewards when you complete a set number of “deals.” The more deals you complete, the bigger the reward tier you can claim. Here are the tiers exactly as shown on the program’s site when I took this screenshot.</p>
-                <figure>
-                    <img src="data:image/png;base64,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" alt="Reward tiers: 2 deals for $5, 5 deals for $100, 10 for $250, 15 for $500, 20 for $750, 25 for $1000" width="513" height="414">
-                    <figcaption>Tiers can change, and the small numbers beside the rewards point to the program’s own terms. Read those on their site before you start.</figcaption>
-                </figure>
-            </section>
-            <section>
-                <h2>Step 1: Choose your target tier</h2>
-                <p>This is simple arithmetic from the table: what each tier pays per completed deal. It’s not a promise of earnings, just a way to compare. Tap a row to highlight it.</p>
-                <div class="scroll">
-                    <table id="tiers">
-                        <thead>
-                            <tr>
-                                <th>Reward</th>
-                                <th>Deals needed</th>
-                                <th>Reward per deal</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <ul class="list">
-                    <li>Higher tiers pay more per deal, but they need more deals, more time and more chances for a deal to cost you something.</li>
-                    <li>Pick a tier you can finish before you need the money. A small reward you claim beats a big one you abandon.</li>
-                    <li>Set your target before you start and write it down.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Step 2: Pick and track your deals</h2>
-                <p>This is where most people lose money or time. Tick these off for every deal:</p>
-                <ul class="chk">
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                            <span>
-                                <strong>Read the terms first.</strong> Check whether the deal is free, needs a paid trial, or needs a purchase.
-                            </span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                            <span>
-                                <strong>Note the cancel date.</strong> If a trial renews, put the cancel-by date in your phone calendar the same day.
-                            </span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                            <span>
-                                <strong>Use a separate email address</strong> just for these sign-ups to keep your main inbox clean.
-                            </span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                            <span>
-                                <strong>Screenshot every confirmation.</strong> If a deal doesn’t register, you’ll want proof.
-                            </span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <input type="checkbox">
-                            <span>
-                                <strong>Never give sensitive logins.</strong> A legitimate deal doesn’t need your bank password or Social Security number. If one asks, skip it.
-                            </span>
-                        </label>
-                    </li>
-                </ul>
-                <h2 style="margin-top:28px">Deal tracker</h2>
-                <div class="scroll">
-                    <table class="trk" id="trk">
-                        <thead>
-                            <tr>
-                                <th>Deal</th>
-                                <th>Date done</th>
-                                <th>Cost?</th>
-                                <th>Cancel by</th>
-                                <th>Confirmed?</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <button type="button" id="add">Add a row</button>
-                <p class="small">Your entries stay on this page only while it’s open. Print or screenshot it to keep a copy.</p>
-            </section>
-            <section>
-                <h2>Step 3: Claim your reward</h2>
-                <ul class="list">
-                    <li>When you reach your tier, follow the program’s own claim steps. The exact process may differ from anything I describe here.</li>
-                    <li>Choose a gift card that works where you plan to shop. Check that your store accepts that card type before you plan around it.</li>
-                    <li>Don’t count on the money until the card arrives. Delivery and verification can take time.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Step 4: Plan your Christmas shopping backwards</h2>
-                <ul class="list">
-                    <li>Write your Christmas shopping budget and the date you need the money by.</li>
-                    <li>Count backwards: shopping days, delivery time, deal time. Start early.</li>
-                    <li>Treat any reward as a bonus toward your list, not as money you’ve already earned.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Mistakes to avoid</h2>
-                <ul class="list">
-                    <li>Skipping the terms and getting charged for a trial you forgot to cancel.</li>
-                    <li>Spending more on deals than the reward is worth.</li>
-                    <li>Starting too late and missing your Christmas deadline.</li>
-                    <li>Using your main email, so confirmations get lost.</li>
-                    <li>Aiming for the biggest tier on day one.</li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <div class="wrap">
-                <div class="note">
-                    <strong>About this guide:</strong> It’s free. I may earn a commission when you complete a sponsor offer to unlock it, and that helps fund my own Christmas. Results vary and are not guaranteed. This guide is independent and is not affiliated with, sponsored by, or endorsed by Hobby Lobby, any retailer, or the program shown.
-                </div>
-            </div>
-        </footer>
-        <script>
-            var tiers = [[5, 2], [100, 5], [250, 10], [500, 15], [750, 20], [1000, 25]];
-            var tb = document.querySelector("#tiers tbody");
-            tiers.forEach(function(t, i) {
-                var tr = document.createElement("tr");
-                tr.style.cursor = "pointer";
-                [["$" + t[0], "num"], [String(t[1]), ""], ["$" + (t[0] / t[1]).toFixed(2), ""]].forEach(function(c) {
-                    var td = document.createElement("td");
-                    td.textContent = c[0];
-                    if (c[1])
-                        td.className = c[1];
-                    tr.appendChild(td);
-                });
-                tr.onclick = function() {
-                    Array.prototype.forEach.call(tb.children, function(r) {
-                        r.classList.remove("pick")
-                    });
-                    tr.classList.add("pick")
-                }
-                ;
-                tb.appendChild(tr);
-            });
-            var body = document.querySelector("#trk tbody");
-            function addRow() {
-                var tr = document.createElement("tr");
-                ["Deal", "Date done", "Cost?", "Cancel by", "Confirmed?"].forEach(function(l) {
-                    var td = document.createElement("td")
-                      , inp = document.createElement("input");
-                    inp.type = "text";
-                    inp.setAttribute("aria-label", l);
-                    td.appendChild(inp);
-                    tr.appendChild(td);
-                });
-                body.appendChild(tr);
-            }
-            for (var i = 0; i < 5; i++)
-                addRow();
-            document.getElementById("add").onclick = addRow;
-        </script>
-    </body>
+<script>
+var tiers=[["$5",2],["$100",5],["$250",10],["$500",15],["$750",20],["$1000",25]];
+var chips=document.getElementById("chips"),out=document.getElementById("out");
+function pick(i){
+  Array.prototype.forEach.call(chips.children,function(c,j){c.setAttribute("aria-pressed",j===i?"true":"false")});
+  out.innerHTML="";
+  var b=document.createElement("b");b.textContent=tiers[i][0]+" reward";
+  out.appendChild(b);
+  out.appendChild(document.createTextNode("Requires "+tiers[i][1]+" completed deals."));
+}
+tiers.forEach(function(t,i){
+  var c=document.createElement("button");c.className="chip";c.type="button";c.textContent=t[0];
+  c.onclick=function(){pick(i)};chips.appendChild(c);
+});
+pick(1);
+</script>
+</body>
 </html>
